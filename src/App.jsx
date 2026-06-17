@@ -5,6 +5,9 @@ import Home from "./pages/home/Home";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// 🔥 VERCEL ANALYTICS IMPORТI (Tepasiga qo'shildi)
+import { Analytics } from '@vercel/analytics/react';
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +19,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+
+      {/* 📊 VERCEL ANALYTICS KOMPONENTI (Eng pastiga, App ichiga joylashtirildi) */}
+      <Analytics />
     </div>
   );
 }
